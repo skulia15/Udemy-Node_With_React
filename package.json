@@ -4,14 +4,14 @@
     "description": "",
     "main": "index.js",
     "engines": {
-        "node": "8.1.1",
-        "npm": "5.0.3"
+        "node": "12.4.0",
+        "npm": "6.9.0"
     },
     "scripts": {
         "start": "node index.js",
         "server": "nodemon index.js",
         "client": "npm run start --prefix client",
-        "dev": "concurrently \"npm run server\" \"npm run client \"",
+        "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run webhook\"",
         "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
     },
     "author": "",
