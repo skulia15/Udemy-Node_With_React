@@ -1,10 +1,11 @@
-const express = require('express');
-const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
-const passport = require('passport');
-const keys = require('./config/keys');
 const bodyParser = require('body-parser');
+const keys = require('./config/keys');
+const mongoose = require('mongoose');
+const passport = require('passport');
+const express = require('express');
 require('./models/User');
+require('./models/Survey');
 require('./services/passport');
 
 mongoose.connect(keys.mongoURI);
@@ -22,8 +23,9 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
+require('./routes/authRoutes')(app);
 
 if (process.env.NODE_ENV === 'production') {
     // express will serve up prod assets like main.js or main.css.
