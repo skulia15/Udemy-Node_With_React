@@ -1,4 +1,5 @@
 ## To view the project run `heroku open`
+Or simply open https://whispering-cove-88373.herokuapp.com/
 ## To deploy the project to heroku run `git push heroku master`
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
