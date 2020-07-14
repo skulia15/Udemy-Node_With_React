@@ -31,7 +31,6 @@ module.exports = app => {
                 }
             })
             .compact()
-            // .uniqBy('email', 'surveyId')
             .uniqWith((a, b) => a.email === b.email && a.surveyId === b.surveyId)
             .each(({ surveyId, email, choice }) => {
                 Survey.updateOne({
