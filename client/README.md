@@ -1,3 +1,6 @@
+## To view the project run `heroku open`
+## To deploy the project to heroku run `git push heroku master`
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
